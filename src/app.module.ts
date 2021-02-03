@@ -1,10 +1,17 @@
 import { Module } from '@nestjs/common';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { GraphQLModule } from '@nestjs/graphql';
+
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-//import { ProductsModule } from './products/products.module';
+import { ProductsModule } from './products/products.module';
 
 @Module({
-  imports: [],
+  imports: [
+    TypeOrmModule.forRoot(),
+    ProductsModule,
+    GraphQLModule.forRoot({ autoSchemaFile: true }),
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
