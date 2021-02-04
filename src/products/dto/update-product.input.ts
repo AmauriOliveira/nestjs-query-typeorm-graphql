@@ -16,7 +16,7 @@ export class UpdateProductInput {
   stock: number;
 
   @Field({ nullable: true })
-  Photograph?: string;
+  photograph?: string;
 
   @Field({ nullable: true })
   description?: string;

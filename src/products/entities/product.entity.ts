@@ -26,11 +26,11 @@ export class Product {
   @FilterableField()
   name: string;
 
-  @Column()
+  @Column({ type: 'float4' })
   @Field(() => Float)
   price: number;
 
-  @Column()
+  @Column({ type: 'float4' })
   @Field(() => Float)
   sale_price: number;
 
@@ -38,12 +38,12 @@ export class Product {
   @FilterableField()
   stock: number;
 
-  @Column()
-  @Field({ nullable: true })
-  Photograph?: string;
+  @Column({ nullable: true })
+  @Field()
+  photograph?: string;
 
-  @Column()
-  @Field({ nullable: true })
+  @Column({ nullable: true })
+  @Field()
   description?: string;
 
   @CreateDateColumn()
