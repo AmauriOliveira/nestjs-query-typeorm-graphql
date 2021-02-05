@@ -2,7 +2,6 @@
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
 </p>
 
-
 [![NodejsBadge](https://img.shields.io/badge/-Nodejs-339933?style=flat-square&logo=Node.js&logoColor=white)](#)
 [![NestJS Badge](https://img.shields.io/badge/-NestJS-E0234E?style=flat-square&logo=nestjs&logoColor=white)](#)
 [![TypeScript Badge](https://img.shields.io/badge/-TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)](#)
@@ -13,17 +12,9 @@
 [![VSCode Badge](https://img.shields.io/badge/-VSCode-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white)](#)
 [![PostgreSQL Badge](https://img.shields.io/badge/-PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=white)](#)
 
-
 ## :open_book: Description
 
 ## :whale: Docker
-
-```bash
-$ npm install
-```
-
-## :cd: Installation
-
 
 ```bash
 # Up database
@@ -31,6 +22,12 @@ $ docker-compose up -d
 
 # down database
 $ docker-compose down
+```
+
+## :cd: Installation
+
+```bash
+$ npm install
 ```
 
 ## :checkered_flag: Running the App
@@ -46,7 +43,7 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## :mag_right:  Test
+## :mag_right: Test
 
 ```bash
 # unit tests
@@ -58,5 +55,3 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
-
-
