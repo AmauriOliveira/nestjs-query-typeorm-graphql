@@ -6,5 +6,6 @@ module.exports = {
   password: process.env.DB_PASSWORD || 'amauri32',
   database: process.env.DB_NAME || 'nest_api',
   entities: ['dist/**/*.entity{.ts,.js}'],
-  synchronize: process.env.DB_SYNC == 'true' || true,
+  url: `postgres://${username}:${password}@${host}:${port}/${database}`,
+  synchronize: process.env.DB_SYNC == 'true' || false,
 };
