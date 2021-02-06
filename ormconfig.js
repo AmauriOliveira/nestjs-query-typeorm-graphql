@@ -7,6 +7,9 @@ module.exports = {
   // password: process.env.DB_PASSWORD || 'amauri32',
   // database: process.env.DB_NAME || 'nest_api',
   url: process.env.DATABASE_URL,
+  extra: {
+    ssl: true,
+  },
   entities: ['dist/**/*.entity{.ts,.js}'],
   synchronize: process.env.DB_SYNC == 'true' || false,
 };
