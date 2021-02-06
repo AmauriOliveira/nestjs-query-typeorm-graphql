@@ -12,9 +12,7 @@ import { ConfigModule } from '@nestjs/config';
 @Module({
   imports: [
     ConfigModule.forRoot(),
-    TypeOrmModule.forRoot({
-      url: process.env.DATABASE_URL,
-    }),
+    TypeOrmModule.forRoot(),
     ProductsModule,
     UsersModule,
     GraphQLModule.forRoot({ autoSchemaFile: true }),
