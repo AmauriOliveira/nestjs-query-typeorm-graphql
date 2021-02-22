@@ -5,6 +5,7 @@ import { CreateProductInput } from './dto/create-product.input';
 import { UpdateProductInput } from './dto/update-product.input';
 import { Product } from './entities/product.entity';
 import { ProductsService } from './products.service';
+import { GqlAuthGuard } from '../auth/auth.guard';
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { ProductsService } from './products.service';
           DTOClass: Product,
           CreateDTOClass: CreateProductInput,
           UpdateDTOClass: UpdateProductInput,
+          guards: [GqlAuthGuard],
           /* 
           Apenas para referencia,  se omitir ele vem como false
           pode desligar o create, update e delete

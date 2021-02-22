@@ -13,9 +13,9 @@ import { ConfigModule } from '@nestjs/config';
   imports: [
     ConfigModule.forRoot(),
     TypeOrmModule.forRoot(),
+    GraphQLModule.forRoot({ autoSchemaFile: true }),
     ProductsModule,
     UsersModule,
-    GraphQLModule.forRoot({ autoSchemaFile: true }),
     AuthModule,
   ],
   controllers: [AppController],

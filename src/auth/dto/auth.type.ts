@@ -5,5 +5,6 @@ import { User } from '../../users/entities/user.entity';
 export class AuthType {
   @Field(() => User)
   user: User;
+  @Field()
   token: string;
 }

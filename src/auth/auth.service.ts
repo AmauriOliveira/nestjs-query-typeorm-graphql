@@ -16,7 +16,7 @@ export class AuthService {
   async validateUser(data: AuthInput): Promise<AuthType> {
     const user = await this.usersService.findUserByEmail(data.email);
 
-    const validPassword = compareSync(data.password, user.password);
+    const validPassword = await compareSync(data.password, user.password);
 
     if (!validPassword) {
       throw new UnauthorizedException('Login fail');
